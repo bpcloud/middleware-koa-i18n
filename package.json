@@ -1,0 +1,36 @@
+{
+  "description": "i18n middleware of bpframework",
+  "dependencies": {
+    "koa-locales": "^1.12.0"
+  },
+  "devDependencies": {},
+  "directories": {},
+  "engines": {
+    "node": ">=10"
+  },
+  "homepage": "https://github.com/bpcloud/middleware-koa-i18n#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bpcloud/middleware-koa-i18n.git"
+  },
+  "keywords": [
+    "bpframework",
+    "i18n"
+  ],
+  "files": [
+    "libs",
+    "types",
+    "index.js"
+  ],
+  "types": "types/index.d.ts",
+  "license": "MIT",
+  "main": "./index.js",
+  "maintainers": [
+    {
+      "name": "brainpoint",
+      "email": "bpoint.lee@gmail.com"
+    }
+  ],
+  "name": "@bpframework/middleware-koa-i18n",
+  "version": "0.0.4"
+}
