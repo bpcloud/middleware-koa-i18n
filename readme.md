@@ -11,6 +11,7 @@ Setup.
 
 ```js
 import { Application } from 'bpframework';
+import middlewareKoaI18n from '@bpframework/middleware-koa-i18n';
 
 let cfg = {
   dirs: ['resource/locales'],
@@ -23,7 +24,7 @@ let cfg = {
   },
 };
 
-Application.use(require('@bpframework/middleware-koa-i18n')(cfg))
+Application.use(middlewareKoaI18n(cfg))
 Application.runKoa(...);
 ```
 
