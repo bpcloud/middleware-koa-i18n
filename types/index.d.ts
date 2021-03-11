@@ -38,4 +38,6 @@ interface BpframeworkMiddleware {
   initiator: (app:any)=>void,
 }
 
-export default function middleware(cfg?: Cfg): BpframeworkMiddleware;
+export const name: string;
+
+export function middleware(cfg?: Cfg): BpframeworkMiddleware;

@@ -13,11 +13,13 @@ var initiator = require('./libs/initiator');
 
 const DefaultLocale = 'zh-CN';
 
-module.export = function (cfg) {
+exports.name = "middleware-koa-i18n";
+
+exports.middleware = function (cfg) {
 
   cfg = cfg || {};
 
-  cfg.dirs = cfg.dirs || ['resource/locales'];
+  cfg.dirs = cfg.dirs || [process.cwd + 'resource/locales'];
   cfg.defaultLocale = cfg.defaultLocale || DefaultLocale;
   cfg.functionName = cfg.functionName || '__i18n';
   cfg.queryField = cfg.queryField || 'locale'; // querystring - `/?locale=en-US`
@@ -26,6 +28,7 @@ module.export = function (cfg) {
 
   return {
     type: 'koa',
+    name: exports.name,
     afterRoute,
     beforeRoute,
     initiator: (app) => {

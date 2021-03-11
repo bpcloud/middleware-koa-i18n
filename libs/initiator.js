@@ -9,16 +9,7 @@
 
 
 module.exports = function (app, cfg) {
-  require('koa-locales')(app, {
-    dirs: ['resource/locales'],
-    defaultLocale: DefaultLocale,
-    functionName: '__i18n',
-    queryField: 'locale', // querystring - `/?locale=en-US`
-    cookieField: 'locale',
-    localeAlias: {
-      zh: 'zh-CN',
-    },
-  });
+  require('koa-locales')(app, cfg);
 
   (global).__i18n = (phrase, ...params) => {
     return (app).__i18n(DefaultLocale, phrase, ...params);
