@@ -10,8 +10,7 @@
 var afterRoute = require('./libs/afterRoute');
 var beforeRoute = require('./libs/beforeRoute');
 var initiator = require('./libs/initiator');
-
-const DefaultLocale = 'zh-CN';
+var defaultCfg = require('./libs/defaultCfg');
 
 exports.name = "middleware-koa-i18n";
 
@@ -20,7 +19,7 @@ exports.middleware = function (cfg) {
   cfg = cfg || {};
 
   cfg.dirs = cfg.dirs || [process.cwd + 'resource/locales'];
-  cfg.defaultLocale = cfg.defaultLocale || DefaultLocale;
+  cfg.defaultLocale = cfg.defaultLocale || defaultCfg.DefaultLocale;
   cfg.functionName = cfg.functionName || '__i18n';
   cfg.queryField = cfg.queryField || 'locale'; // querystring - `/?locale=en-US`
   cfg.cookieField = cfg.cookieField || 'locale';

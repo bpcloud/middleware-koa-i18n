@@ -7,12 +7,13 @@
 * Desc: 
 */
 
+var defaultCfg = require('./defaultCfg');
 
 module.exports = function (app, cfg) {
   require('koa-locales')(app, cfg);
 
   (global).__i18n = (phrase, ...params) => {
-    return (app).__i18n(DefaultLocale, phrase, ...params);
+    return (app).__i18n(defaultCfg.DefaultLocale, phrase, ...params);
   }
 
   (global).__i18nLang = (lang, phrase, ...params) => {
