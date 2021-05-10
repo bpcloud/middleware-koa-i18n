@@ -7,4 +7,11 @@
 * Desc: 
 */
 
-exports.DefaultLocale = 'zh-CN';
+exports.defaultCfg = {
+  dirs: ['resource/locales'],
+  defaultLocale: 'zh-CN',
+  functionName: '__i18n',
+  queryField: 'locale', // querystring - `/?locale=en-US`
+  cookieField: 'locale',
+  localeAlias: {}
+}

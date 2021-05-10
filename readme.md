@@ -16,7 +16,6 @@ import * as middleware_i18n from '@bpframework/middleware-koa-i18n';
 let cfg = {
   dirs: ['resource/locales'],
   defaultLocale: 'zh-CN',
-  functionName: '__i18n',
   queryField: 'locale', // querystring - `/?locale=en-US`
   cookieField: 'locale',
   localeAlias: {
